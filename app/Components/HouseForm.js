@@ -28,6 +28,8 @@ export function getHouseForm(house = new House({})) {
       </div>
       <label class="form-label" for="price">Price</label>
       <input class="form-control" type="number" id="price" name="price" value="${house.price}">
+      <label class="form-label" for="levels">Levels</label>
+      <input class="form-control" type="number" id="levels" name="levels" value="${house.levels}">
       <label class="form-label" for="img">Image</label>
       <input class="form-control" type="text" id="img" name="img" value="${house.imgUrl}">
       <label class="form-label" for="description">Description</label>

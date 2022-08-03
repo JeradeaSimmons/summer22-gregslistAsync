@@ -51,13 +51,14 @@ export class HousesController {
         imgUrl: form.img.value,
         price: form.price.value,
         year: form.year.value,
+        levels: form.levels.value,
       }
       console.log(newHouse);
       await housesService.createHouse(newHouse)
       form.reset()
-
-    } catch (error) {
-      console.error(['Create House'], error)
+    }
+    catch (error) {
+      console.error('[Create House]', error)
       Pop.error(error)
     }
   }
@@ -88,7 +89,8 @@ export class HousesController {
         bathrooms: form.bathrooms.value,
         price: form.price.value,
         imgUrl: form.img.value,
-        description: form.description.value
+        description: form.description.value,
+        levels: form.levels.value
 
       }
       await housesService.editHouse(houseData)
